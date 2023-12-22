@@ -1,0 +1,4 @@
+[[headers]]
+ for = "*.jsx"
+ [headers.values]
+   content-type = "application/javascript"
