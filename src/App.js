@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Futur site de notre projet</p>
-        {/* <Authentification /> */}
+        <Authentification />
       </header>
     </div>
   )
