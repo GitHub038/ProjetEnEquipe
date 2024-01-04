@@ -9,13 +9,13 @@ const PageNav = () => {
 
       <ul className="flex flex-row gap-16 mx-4">
         <li>
-          <NavLink to="/recherche">Rechercher un DAE</NavLink>
+          <NavLink to="/searchDAE">Rechercher un DAE</NavLink>
         </li>
         <li>
           <NavLink to="/info">Info et FAQ</NavLink>
         </li>
         <li>
-          <NavLink to="/login" className="">
+          <NavLink to="/auth" className="">
             Login
           </NavLink>
         </li>

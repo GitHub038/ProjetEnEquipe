@@ -14,20 +14,20 @@ const SignIn = ({ isLoading }) => {
   const auth = getAuth(app)
   const navigate = useNavigate()
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((user) => {
-      // Success...
-      console.log(user)
-      navigate('/')
-      //...
-    })
-    .catch((error) => {
-      // Error
-      console.log(error)
-    })
   const handleSignIn = async (e) => {
     e.preventDefault()
-    alert('Vérifier votre email et mot de passe ou Inscrivez-vous !')
+    signInWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        // Success...
+        console.log(user)
+        navigate('/profil')
+        //...
+      })
+      .catch((error) => {
+        // Error
+        alert('Vérifier votre email et mot de passe ou Inscrivez-vous !')
+        console.log(error)
+      })
   }
   return (
     <div>

@@ -7,29 +7,31 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Icons } from '@/components/ui/icons'
 import { app } from '@/firebase/init_Firebase'
+import { Navigate } from 'react-router-dom'
 
 const SignUp = ({ isLoading }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const auth = getAuth(app)
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((user) => {
-      // Signed in
-      // Success...
-      console.log(user)
-      //...
-      // ...
-    })
-    .catch((error) => {
-      //   const errorCode = error.code
-      //   const errorMessage = error.message
-      // Error
-      console.log(error)
-    })
   const handleSignUp = async (e) => {
     e.preventDefault()
-    alert('Compte crée avec succes. Connectez-vous avec le Sign In !')
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        // Signed in
+        // Success...
+        console.log(user)
+        // Navigate('/sign-in')
+        alert('Compte crée avec succes. Connectez-vous avec le Sign In !')
+        //...
+        // ...
+      })
+      .catch((error) => {
+        //   const errorCode = error.code
+        //   const errorMessage = error.message
+        // Error
+        console.log(error)
+      })
   }
 
   return (
