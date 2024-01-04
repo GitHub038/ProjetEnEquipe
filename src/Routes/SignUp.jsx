@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Icons } from '@/components/ui/icons'
 import { app } from '@/firebase/init_Firebase'
-import { Navigate } from 'react-router-dom'
+
 
 const SignUp = ({ isLoading }) => {
   const [email, setEmail] = useState('')
@@ -21,7 +21,7 @@ const SignUp = ({ isLoading }) => {
         // Signed in
         // Success...
         console.log(user)
-        // Navigate('/sign-in')
+
         alert('Compte crée avec succes. Connectez-vous avec le Sign In !')
         //...
         // ...
