@@ -7,6 +7,9 @@ import AuthContext from './Context/AuthContext'
 import Protected from './Routes/Protected'
 import Authentification from './pages/authentification'
 import DaeRender from './components/DaeRender'
+import HomePage from './pages/homePage'
+import SearchDAE from './pages/SearchDAE'
+import InfoDAE from './pages/infoDAE'
 
 // TODO : Ici mettre les routes de notre projet
 
@@ -22,7 +25,11 @@ function App() {
       ),
     },
     {
-      path: '/authentification',
+      path: '/homePage',
+      element: <HomePage />,
+    },
+    {
+      path: '/login',
       element: <Authentification />,
     },
     {
@@ -32,6 +39,14 @@ function App() {
     {
       path: '/sign-up',
       element: <SignUp />,
+    },
+    {
+      path: '/recherche',
+      element: <SearchDAE />,
+    },
+    {
+      path: '/info',
+      element: <InfoDAE />,
     },
   ])
   return (
