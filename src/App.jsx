@@ -9,7 +9,7 @@ import Authentification from './pages/authentification'
 import DaeRender from './components/DaeRender'
 import HomePage from './pages/homePage'
 import InfoDAE from './pages/infoDAE'
-import Profil from './pages/profil'
+import Profil from './pages/profil/profil'
 
 // TODO : Ici mettre les routes de notre projet
 
